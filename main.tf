@@ -9,7 +9,7 @@ resource "aws_lambda_function" "test_lambda" {
   # path.module in the filename.
   filename      = "lambda_function_payload.zip"
   function_name = "lambda_function_name"
-  role          = arn:aws:iam::327669278944:role/terraform-credential
+  role          = "arn:aws:iam::327669278944:role/terraform-credential"
   handler       = "index.test"
 
   source_code_hash = data.archive_file.lambda.output_base64sha256
