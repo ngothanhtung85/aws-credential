@@ -1,7 +1,14 @@
+terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+      version = "4.15.1"
+    }
+  }
+}
+
 provider "aws" {
   region = "us-west-2"
-  alias = "bridge"
-  version = "4.15.1"
 }
 
 data "archive_file" "lambda" {
