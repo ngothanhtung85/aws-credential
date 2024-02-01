@@ -1,7 +1,7 @@
 provider "aws" {
   region = "us-west-2"
   alias = "bridge"
-  version = "~> 1.7.0"
+  version = "4.15.1"
 }
 
 data "archive_file" "lambda" {
